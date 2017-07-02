@@ -1,3 +1,5 @@
+=== WELCOME ===
+
 This is my journey towards learning Python 2 from
 learnpythonthehardway.org
 
