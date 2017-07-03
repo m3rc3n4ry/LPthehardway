@@ -3,22 +3,18 @@ from os.path import exists
 
 script, from_file, to_file = argv
 
-print "Copying from %s to %s" % (from_file, to_file)
+# removed the line telling us "The script is copying from one file to another"
 
-# we could do these two on one line, how?
-in_file = open(from_file)
-indata = in_file.read()
+# converted to one line
+indata = open(from_file).read()
 
-print "The input file is %d bytes long" % len(indata)
+# size of the file is irrelevant here, hence removed
 
-print "Does the output file exist? %r" % exists(to_file)
-print "Ready, hit RETURN to continue, CTRL-C to abort."
-raw_input()
+# no need to know about existence of a file, script's gonna create it anyway
+# why were we even doing "Hit RETURN or CTRL-C"?!
 
-out_file = open(to_file, 'w')
-out_file.write(indata)
+# no need for a file object, in this case, out_file
+# using append mode to see difference in file content
+open(to_file, 'a').write(indata)
 
 print "Alright, all done."
-
-out_file.close()
-in_file.close()
