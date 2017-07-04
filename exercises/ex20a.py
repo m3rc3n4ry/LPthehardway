@@ -37,9 +37,9 @@ current_line = 1
 print_a_line(current_line, current_file) # call print_a_line
 
 # increse the value of current_line by 1 to change it to 2
-current_line = current_line + 1
+current_line += 1 # using shorthand
 print_a_line(current_line, current_file) # call print_a_line
 
 # again, increse the value of current_line by 1 to change it to 3
-current_line = current_line + 1
+current_line += 1 # using shorthand
 print_a_line(current_line, current_file) # call print_a_line
